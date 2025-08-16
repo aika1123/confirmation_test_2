@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/products/register',  [ContactController::class, 'create'])->name('products.create');
+
+Route::post('/products/register', [ContactController::class, 'store'])->name('products.store');
+
+Route::get('/products', [ContactController::class, 'index'])->name('products.list');
+
+Route::get('/products/{productId}', [ContactController::class, 'show'])->name('products.show');

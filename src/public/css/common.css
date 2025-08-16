@@ -1,0 +1,18 @@
+.header {
+    background: #ffff;
+}
+
+.header__inner {
+    padding: 10px 20px 10px 20px;
+    border-bottom: 1px;
+    max-width: 1230px;
+}
+
+.header__heading {
+    color: #f5c800;
+    font-size: 30px;
+    font-weight: 500;
+    font-style: Italic;
+    font-family: jsMath-cmti10;
+    text-align: left;
+}
