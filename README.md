@@ -1,0 +1,40 @@
+# もぎたて
+
+## 環境構築
+
+### Docker ビルド
+
+1. git clone git@github.com:aika1123/confirmation_test_2.git
+2. DockerDesktop を立ち上げる
+3. docker-compose up -d --build
+
+### Laravel 環境構築
+
+1. docker-compose exec php bash
+2. composer install
+3. 「.env.example」ファイルを 「.env」ファイルに命名を変更。または、新しく.env ファイルを作成
+4. .env に以下を追加
+   DB_CONNECTION=mysql
+   DB_HOST=mysql
+   DB_PORT=3306
+   DB_DATABASE=laravel_db
+   DB_USERNAME=laravel_user
+   DB_PASSWORD=laravel_pass
+5. アプリケーションキーの作成
+6. マイグレーションの実行
+7. シーディングの実行
+
+## 使用技術
+
+PHP8.4.6
+Lalavel8.83.29
+MySQL8.0.26
+
+## ER 図
+
+![ER図](er-diagrm.png)
+
+## URL
+
+- 環境開発 : http://localhost/
+- phpMyAdmin : http://localhost:8080/
